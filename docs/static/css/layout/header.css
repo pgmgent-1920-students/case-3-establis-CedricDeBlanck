@@ -1,0 +1,10 @@
+.logo > a {
+  background: url('../../images/logo.svg') no-repeat center center;
+  background-size: cover;
+
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  text-indent: -999rem;
+}

@@ -1,0 +1,172 @@
+.main-nav {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.nav__item.nav__item--active a{
+  color: var(--color-red-active);
+}
+
+.nav__item {
+  color: var(--color-cyan);
+  margin-bottom: 30px;
+}
+
+.nav a {
+  color: var(--color-blue-cyan);
+  font-size: 22px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--color-light-blue);
+}
+
+#nav-bar-open {
+  padding-top: 100px;
+  left: 75px;
+  width: 410px;
+  z-index: 998;
+}
+
+.dropdown-content>ul>li {
+  margin-bottom: 30px;
+  color: #152d3a;
+  text-transform: lowercase;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.langauges {
+  padding-top: 30px;
+  margin-left: 30px;
+  color: #152d3a;
+}
+
+.langauges>p {
+  margin-bottom: 15px;
+}
+
+.langaugesactive {
+  color: #d4092d;
+}
+
+.nav-bar-button-open {
+  background: var(--color-blue-cyan);
+  border: none;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  top: 0px;
+}
+
+.buttonnavigation {
+  z-index: 999;
+}
+
+.nav-bar-button {
+  transform: translateX(50%);
+  transition-duration: 1s;
+}
+
+.nav-button-1 {
+  z-index: 99;
+  position: relative;
+}
+
+.dropdown-content-opened {
+  transform: translateX(100%);
+  transition-duration: 750ms;
+  background: rgba(255, 255, 255, .95);
+  height: 100vh;
+  width: 340px;
+  top: 0px;
+  z-index: 20;
+  position: absolute;
+}
+
+ul {
+  list-style: none;
+  color: var(--color-cyan);
+}
+
+.dropdown-content-opened.show-dropdown {
+  transform: translateX(-100%);
+  transition-duration: .4s;
+  background: rgba(255, 255, 255, .95);
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.dropdown-content {
+  padding: 20px 14px 0px;
+}
+
+#icon {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  z-index: 9999999;
+}
+
+.hamburger {
+  width: 60%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 51%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+  margin-top: -1px;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  width: 101%;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+  text-align: center;
+  margin-left: -17px;
+}
+
+.hamburger:before {
+  top: -10px
+}
+
+
+.hamburger:after {
+  top: 10px;
+}
+
+#icon.active .hamburger {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+#icon.active .hamburger:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#icon.active .hamburger:after {
+  top: 0;
+  transform: rotate(-45deg);
+}

@@ -1,7 +1,7 @@
 {
     "title": "pgm.gent",
-    "subdomain": "Arne Quinze",
-    "domain": "Artevelde University of Applied Sciences",
+    "subdomain": "Establis",
+    "domain": "Establis",
     "url": "https://myurl.com/",
     "description": "Arne Quinze is a Belgian sculptor and painter. With his art he wants to contest the greyness and dullness of the environments we live in. Driven by the force of nature, guiding our cities towards a better and greener future.",
     "feed": {
@@ -12,7 +12,7 @@
         "id": "https://myurl.com/"
     },
     "author": {
-        "name": "Philippe De Pauw - Waterschoot",
-        "email": "philippe.depauw@arteveldehs.be"
+        "name": "Cédric De Blanck",
+        "email": "cedrdebl1@student.arteveldehs.be"
     }
 }

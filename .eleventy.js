@@ -45,7 +45,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
-    pathPrefix: "/11ty-boilerplate",
+    pathPrefix: "/case-3-establis-CedricDeBlanck",
     templateFormats: ["html", "liquid", "md", "njk"],
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",

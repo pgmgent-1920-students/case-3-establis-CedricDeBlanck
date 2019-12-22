@@ -1,0 +1,28 @@
+<div class="buttonnavigation">
+    <button onclick="sidebarNav()" class="nav-bar-button-open">
+        <div class="nav-bar-button1">
+            <div onclick="buttonSwitch()" id="icon">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </button>
+</div>
+    <div id="nav-bar-open" class="dropdown-content-opened">
+        <nav class="nav">
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+                listElement: "ul",
+                listItemElement: "li",
+                listClass: "nav__list",
+                listItemClass: "nav__item",
+                listItemHasChildrenClass: "has-children",
+                activeListItemClass: "nav__item--active",
+                activeKey: eleventyNavigation.key,
+                showExcerpt: false
+            }) | safe }}
+        </nav>
+            <div class="langauges">
+                <p>English</p>
+                <p class="langaugesactive">Dutch</p>
+            </div>
+    </div>
+</div>
