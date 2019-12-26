@@ -1,20 +1,25 @@
 <!doctype html>
 <html lang="nl">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ title or site.title }} | {{ subdomain or site.subdomain }} | {{ domain or site.domain }}</title>
-        <meta name="description" content="{{ description or site.description }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-        <link rel="stylesheet" href="{{ '/static/css/main.css' | url }}">
-    </head>
-    <body> 
-        {% include "components/header.njk" %}
-        <main class="wrapper wrapper--main {{ templateClass }}">
-            {{ content | safe }}
-        </main>
-        {% include "components/footer.njk" %}
-        <script src="{{ '/static/js/main.js' | url }}"></script>
-        <script src="{{ '/static/js/navigation.js' | url }}"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or site.title }} | {{ subdomain or site.subdomain }} | {{ domain or site.domain }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="{{ '/static/css/main.css' | url }}">
+</head>
+
+<body>
+    {% include "components/header.njk" %}
+    <main class="wrapper wrapper--main {{ templateClass }}">
+        {{ content | safe }}
+    </main>
+    {% include "components/footer.njk" %}
+    <script src="{{ '/static/js/main.js' | url }}"></script>
+    <script src="{{ '/static/js/navigation.js' | url }}"></script>
+    <script src="https://kit.fontawesome.com/8a1b33090c.js" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

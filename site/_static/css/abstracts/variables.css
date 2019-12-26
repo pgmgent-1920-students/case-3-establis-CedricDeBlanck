@@ -5,6 +5,7 @@
   --color-grey-500: #E6E6E6;
   --color-grey-300: #C6C6C6;
   --color-grey-600: #787878;
+  --color-grey-text: #888;
   --color-blue:  #003cff;
   --color-blue-cyan: #152d3a;
   --color-light-blue: #0056b3;
@@ -12,6 +13,7 @@
 
   --spacer: 12px;
 
+  --font-size-h2: 2.6rem;
   --font-family-roboto: 'Roboto', sans-serif;
   --font-family-lato: 'Lato', sans-serif;
   --font-family-body: var(--font-family-roboto);

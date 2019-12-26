@@ -1,0 +1,119 @@
+.home_section_1_content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: calc(var(--spacer)*15);
+}
+
+.home_section_1_content > div > p {
+  width: 691px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 1384px;
+  margin: 0 auto;
+}
+
+.home_section_1_content h2 {
+  color: var(--color-blue-cyan);
+}
+
+.home_section_1_content p {
+  color: var(--color-grey-text);
+}
+
+.read-more-color-blue a {
+  color: var(--color-blue-cyan);
+}
+
+.read-more-color-white a {
+  color: var(--color-white);
+}
+
+.read-more a {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.read-more i {
+  color: var(--color-red-active);
+  margin-left: var(--spacer);
+  transform: translate(0px, 0);
+  transition-duration: .350s;
+}
+
+.read-more > a:hover {
+  color: #d4092d;
+  transition-duration: 1s;
+}
+
+.read-more:hover i{
+  transform: translate(5px, 0);
+  transition-duration: .350s;
+}
+
+.read-more > a > i {
+  color: var(--color-red-active);
+}
+
+.red_line {
+  border-bottom: 1px solid var(--color-red-active);
+  width: 80px;
+  margin: 20px 0px 30px 0px;
+}
+
+.home_section_3 {
+  width: 96.1%;
+  margin: 0;
+  height: 476px;
+  position: relative;
+}
+
+.home_section_3_content {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  margin: 0 auto;
+}
+
+.innertext_section_3 {
+  display: flex;
+  top: 25%;
+  position: absolute;
+  left: 25%;
+}
+
+.innertext_section_3_content {
+  padding-top: calc(var(--spacer)*2);
+}
+
+.home_section_3_blue_bg {
+  background-color: var(--color-blue-cyan);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: -99998;
+  position: absolute;
+}
+
+.home_section_3_bg {
+  background-image: url(../../images/establis-reasons-bg.jpg);
+  background-color: var(--color-blue-cyan);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -99999;
+}
+
+.home_section_3_content > div > .read-more {
+  color: var(--color-white);
+}
+
+.home_section_3_content span {
+  font-size: 16rem;
+  font-weight: 700;
+  margin-right: calc(var(--spacer)*3);
+}
+
