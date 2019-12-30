@@ -8,6 +8,7 @@
     <meta name="description" content="Arne Quinze is a Belgian sculptor and painter. With his art he wants to contest the greyness and dullness of the environments we live in. Driven by the force of nature, guiding our cities towards a better and greener future.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="/case-3-establis-CedricDeBlanck/static/css/main.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -60,37 +61,45 @@
     <main class="wrapper wrapper--main tmpl-home">
         
 <div class="contact-title">
-<h2>contact</h2>
-<div class="red_line"></div>
+    <h2>contact</h2>
+    <div class="red_line"></div>
 </div>
-            <div class="contact-info">
-                <div class="contact-roeselare">
-                    <h1>Establis Roeselare nv</h1>
-                    <p>Establis Roeselare nv</p>
-                    <p class="grey">Beversesteenweg 612 <br>
-                        8800 - Roeselare <br>
-                        <a href="http://www.google.be/maps">open in google maps</a></p>
-                    <p>+32 (0)51 43 12 00 <br>
-                        <a href="mailto:roeselare@establis.eu">roeselare@establis.eu</a>
-                        <p>
-                            <p class="grey">
-                                BTW BE 0430 475 409 <br>
-                                RPR Kortrijk<p>
+<div class="contact-info">
+    <div class="contact-roeselare">
+        <h1>Establis Roeselare nv</h1>
+        <p>Establis Roeselare nv</p>
+        <p class="grey">Beversesteenweg 612 <br>
+            8800 - Roeselare <br>
+            <a href="http://www.google.be/maps">open in google maps</a></p>
+        <p>+32 (0)51 43 12 00 <br>
+            <a href="mailto:roeselare@establis.eu">roeselare@establis.eu</a>
+            <p>
+                <p class="grey">
+                    BTW BE 0430 475 409 <br>
+                    RPR Kortrijk<p>
+    </div>
+    <div class="g-fb-row-6">
+        <div class="contact-antwerpen">
+            <h1>Establis Antwerpen <br> bvba</h1>
+            <p>Establis Antwerpen bvba</p>
+
+            <p class="grey">Jan van Gentstraat 7 bus 201 <br> 2000 - Antwerpen <br>
+                <a href="">open in google maps</a></p>
+
+            <p>+32 (0)3 640 38 10 <br> <a href="mailto:antwerpen@establis.eu">antwerpen@establis.eu</a></p>
+            <p>BTW BE 0895 940 203 <br>
+                RPR Antwerpen</p>
+        </div>
+    </div>
+</div>
+                <div class="map_detail">
+                    <div class="mapboxmap" id='map' style='width: 539px; height: 410px;'></div>
+                    <div class="details_contact">
+                        <p><strong>Matthias Talloen</strong><br>Hazelaarstraat 4<br>8020 Oostkamp</p>
+                        <p><a href="#">0495 25 22 63</a><br><a href="#">info@matthiastalloen.be</a></p>
+                        <p>BE 0896.739.858</p>
+                    </div>
                 </div>
-                <div class="g-fb-row-6">
-                <div class="contact-antwerpen">
-                    <h1>Establis Antwerpen <br> bvba</h1>
-                    <p>Establis Antwerpen bvba</p>
-
-                    <p class="grey">Jan van Gentstraat 7 bus 201 <br> 2000 - Antwerpen <br>
-                        <a href="">open in google maps</a></p>
-
-                    <p>+32 (0)3 640 38 10 <br> <a href="mailto:antwerpen@establis.eu">antwerpen@establis.eu</a></p>
-                    <p>BTW BE 0895 940 203 <br>
-                        RPR Antwerpen</p>
-                </div>
-            </div>
-
     </main>
     <footer class="wrapper wrapper--footer">
     <div class="g-fb-container">
@@ -212,7 +221,8 @@
     <script src="/case-3-establis-CedricDeBlanck/static/js/aboutus.js"></script>
     <script src="/case-3-establis-CedricDeBlanck/static/js/slider.js"></script>
     <script src="https://kit.fontawesome.com/8a1b33090c.js" crossorigin="anonymous"></script>
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <script src="/case-3-establis-CedricDeBlanck/static/js/mapboxcontact.js"></script>
 </body>
 
 </html>
