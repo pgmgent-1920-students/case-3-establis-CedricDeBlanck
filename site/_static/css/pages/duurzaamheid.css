@@ -1,0 +1,30 @@
+.duurzaamheid_text {
+  width: 1000px;
+  margin: 0 auto;
+  color: var(--color-grey-text);
+}
+
+.duurzaamheid_content span {
+  font-weight: bold;
+  color: var(--color-grey-dark);
+}
+
+.duurzaamheid_content ul {
+  list-style: circle;
+  margin-left: calc(var(--spacer) + 3px);
+  margin-bottom: calc(var(--gutter) - 10px);
+}
+
+.duurzaamheid_text h3 {
+  color: var(--color-blue-cyan);
+  margin-bottom: var(--spacer);
+  font-size: 25px;
+}
+
+.duurzaamheid_content li {
+  margin-bottom: var(--spacer);
+}
+
+.duurzaamheid_content p:last-child {
+  margin-bottom: calc(var(--gutter)*7);
+}

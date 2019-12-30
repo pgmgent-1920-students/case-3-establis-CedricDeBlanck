@@ -36,3 +36,48 @@
   font-size: var(--font-size-h2);
 
 }
+
+.aboutus_image {
+  background-image: url(../../images/establis-about.jpg);
+  width: 865px;
+  height: 802px;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutus_text {
+  display: flex;
+}
+
+.aboutus_innertext {
+  width: 442px;
+  margin: auto;
+}
+
+.aboutus_innertext p {
+  color: var(--color-grey-text);
+}
+
+.aboutus_innertext h2 {
+  color: var(--color-blue-cyan);
+  font-size: calc(var(--font-size-h2) - 5px);
+}
+
+.aboutus_text_section2 {
+  width: 1100px;
+  margin: calc(var(--gutter)*5) auto;
+}
+
+.aboutus_text_section2 h2 {
+  font-size: calc(var(--font-size-h2) - 10px);
+  color: var(--color-blue-cyan);
+}
+
+.aboutus_text_section2 p {
+  color: var(--color-grey-text);
+}
+
+.aboutus_text_section2 span {
+  font-weight: bold;
+  color: var(--color-grey-dark);
+}

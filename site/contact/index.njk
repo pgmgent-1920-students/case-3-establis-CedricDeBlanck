@@ -1,8 +1,8 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-key: contact
-order: 8
+    key: contact
+    order: 8
 title: contact
 ---
 <div class="contact-title">
@@ -37,11 +37,8 @@ title: contact
         </div>
     </div>
 </div>
-                <div class="map_detail">
-                    <div class="mapboxmap" id='map' style='width: 539px; height: 410px;'></div>
-                    <div class="details_contact">
-                        <p><strong>Matthias Talloen</strong><br>Hazelaarstraat 4<br>8020 Oostkamp</p>
-                        <p><a href="#">0495 25 22 63</a><br><a href="#">info@matthiastalloen.be</a></p>
-                        <p>BE 0896.739.858</p>
-                    </div>
-                </div>
+<div class="map_detail">
+    <div class="mapboxmap" id='map'></div>
+</div>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<script src="{{ '/static/js/mapboxcontact.js' | url }}"></script>

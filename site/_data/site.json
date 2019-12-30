@@ -1,11 +1,11 @@
 {
     "title": "pgm.gent",
     "subdomain": "Establis",
-    "domain": "Establis",
+    "domain": "",
     "url": "https://myurl.com/",
-    "description": "Arne Quinze is a Belgian sculptor and painter. With his art he wants to contest the greyness and dullness of the environments we live in. Driven by the force of nature, guiding our cities towards a better and greener future.",
+    "description": "Establis",
     "feed": {
-        "subtitle": "Arne Quinze is a Belgian sculptor and painter. With his art he wants to contest the greyness and dullness of the environments we live in. Driven by the force of nature, guiding our cities towards a better and greener future.",
+        "subtitle": "Establis",
         "filename": "feed.xml",
         "path": "/feed/feed.xml",
         "url": "https://myurl.com/feed/feed.xml",
