@@ -1,0 +1,28 @@
+.slider-image1 {
+  background-image: url(../../images/banner.jpg);
+  width: 96.1%;
+  height: 100vh;
+}
+
+.slider-image2 {
+  background-image: url(../../images/banner2.jpg);
+  width: 96.1%;
+  height: 100vh;
+}
+
+.slider-image3 {
+  background-image: url(../../images//banner3.jpg);
+  width: 96.1%;
+  height: 100vh;
+}
+
+.slider-image1, .slider-image2, .slider-image3 {
+  position: absolute;
+  top: 0px;
+  z-index: -2;
+}
+
+.slider {
+  height: 100vh;
+}
+

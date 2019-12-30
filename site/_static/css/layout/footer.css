@@ -47,6 +47,10 @@
   text-align: left;
 }
 
+.copyright_text p {
+  margin-left: -70px;
+}
+
 .signup {
   margin: calc(var(--spacer)*5) 0px;
   display: flex;

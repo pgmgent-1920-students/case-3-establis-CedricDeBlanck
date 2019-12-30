@@ -26,3 +26,11 @@ h2 {
   font-weight: 900;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.time {
+  color: #d4092d;
+}
+

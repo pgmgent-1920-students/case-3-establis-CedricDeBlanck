@@ -3,6 +3,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 999999;
 }
 
 .nav__item.nav__item--active a{

@@ -1,0 +1,28 @@
+.contact-info p {
+  color: var(--color-grey-text);
+}
+
+.contact-info h1 {
+  font-size: 23px;
+  color: var(--color-blue-cyan);
+  text-transform: uppercase;
+  margin-bottom: var(--spacer);
+}
+
+.contact-info a {
+  color: var(--color-blue-cyan);
+}
+
+.contact-info {
+  display: flex;
+  width: 650px;
+  justify-content: space-between;
+  margin-left: calc(var(--gutter)*16);
+  margin-top: calc(var(--gutter) - 130px);
+}
+
+.contact-title {
+  margin-left: calc(var(--gutter)*1.5);
+  margin-top: calc(var(--gutter)*2);
+}
+

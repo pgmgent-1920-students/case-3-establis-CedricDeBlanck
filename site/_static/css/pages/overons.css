@@ -1,0 +1,38 @@
+.aboutus_header_image img {
+  position: absolute;
+  top: 0px;
+  width: 96.1%;
+  height: 578px;
+  z-index: -2;
+  height: 578px;
+}
+
+.boutus_header {
+  position: absolute;
+}
+
+.aboutus_header_image {
+  height: 578px;
+}
+
+.aboutus_header_blue_bg {
+  width: 50%;
+  background-color: var(--color-blue-cyan);
+  z-index: -1;
+  height: 578px;
+  opacity: .7;
+  position: absolute;
+  top: 0px;
+}
+
+.aboutus_content {
+  color: var(--color-white);
+  position: absolute;
+  left: calc(var(--gutter)*6);
+  top: calc(var(--gutter)*8);
+}
+
+.aboutus_content h2 {
+  font-size: var(--font-size-h2);
+
+}
