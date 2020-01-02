@@ -1,0 +1,55 @@
+.werken_bij_ons {
+  color: var(--color-blue-cyan);
+  width: 520px;
+  margin-left: calc(var(--gutter)*6);
+  margin-top: calc(var(--gutter)*2);
+}
+
+.werken_bij_ons p {
+  color: var(--color-grey-text);
+}
+
+.overtuigd {
+  margin-left: calc(var(--gutter)*6);
+  color: var(--color-blue-cyan);
+}
+
+.overtuigd_contact {
+  margin-left: calc(var(--gutter)*2);
+
+}
+
+.overtuigd_contact > p > a {
+  color: var(--color-red-active);
+}
+
+.overtuigd_contact p {
+  color: var(--color-grey-text);
+}
+
+.overtuigd_bottom {
+  display: flex;
+}
+
+.overtuigd_contact h4 {
+  color: var(--color-blue-cyan);
+  font-size: var(--font-size-h4);
+}
+
+.profielen > ul > li {
+  margin-top: var(--gutter);
+  text-transform: uppercase;
+}
+
+.profiel {
+  color: var(--color-blue-cyan);
+}
+
+.werken_bij_ons_image {
+  background-image: url(../../images/team_home.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 920px;
+  height: 517px;
+  margin: calc(var(--gutter)*2) auto calc(var(--gutter)*6) auto;
+}

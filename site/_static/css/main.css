@@ -6,10 +6,11 @@
 @import "layout/footer.css";
 @import "layout/grid.css";
 @import "layout/header.css";
-@import "pages/home.css";
 @import "components/navigation.css";
+@import "components/slider.css";
 @import "pages/team.css";
 @import "pages/overons.css";
-@import "components/slider.css";
+@import "pages/home.css";
 @import "pages/contact.css";
 @import "pages/duurzaamheid.css";
+@import "pages/werkenbijons.css";
