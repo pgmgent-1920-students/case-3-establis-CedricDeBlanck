@@ -1,0 +1,38 @@
+[
+    {
+        "title" : "topklanten en topcollega’s",
+        "text"  : "Onze focus op stabiliteit brengt topwerken voor topklanten, maar ook topcollega’s met dezelfde passie. Zo zijn we allemaal, klanten en medewerkers, verbonden door eenzelfde belang.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons1.jpg"
+    },
+    {
+        "title" : "samen groeien",
+        "text"  : "Teamwerk maakt ons sterk. Het zorgt dat we groeien als individuen en als bedrijf.  We geloven dat als een individu groeit, ook het team en de organisatie groeit. Daarom hechten we veel belang aan groei en ontwikkeling.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons2.jpg"
+    },
+    {
+        "title" : "persoonlijke ontwikkeling ",
+        "text"  : "Coaching en opleiding zit in het DNA van Establis. Jobtrainingen en cursussen in specifieke vaardigheden, maar ook trainingen gericht op je persoonlijke ontwikkeling. Bij Establis vind je een brede waaier aan opleidingen.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons3.jpg"
+    },
+    {
+        "title" : "werk en privé in evenwicht",
+        "text"  : "Gelukkige werknemers zijn betere werknemers. Een boutade, maar zeker geen holle slogan. Van het welzijn van onze medewerkers maken we iedere dag werk.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons4.jpg"
+    },
+    {
+        "title" : "open stimulerende omgeving",
+        "text"  : "Geen schotten tussen de verschillende niveaus en een open debatcultuur. Het stimuleert ons elke dag. Daarom organiseren we vaak bijeenkomsten waar we nadenken over nieuwe technologieën, ideeën bedenken en ze ook uitwerken.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons5.jpg"
+    },
+    {
+        "title" : "maximale jobtevredenheid",
+        "text"  : "Uitdagende projecten om je honger te stillen en nadien tevreden onderuitzakken? Check. Wie van een uitdaging houdt, is bij ons aan het juiste adres. En vaak gaat het niet om logische vraagstukken. Onze projecten overstijgen het puur wetenschappelijke.",
+        "solliciteer" : "Solliciteer nu! jobs@establis.eu",
+        "image" : "../static/images/reasons/reasons6.jpg"
+    }
+]

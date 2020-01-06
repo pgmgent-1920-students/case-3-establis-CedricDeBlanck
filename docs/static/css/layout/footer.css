@@ -19,9 +19,18 @@
   margin-top: calc(var(--spacer)*4);
 }
 
+.footer__navigation li:hover {
+  color: var(--color-red-active);
+  transition: 0.350s;
+}
+
 .footer__navigation li {
   color: var(--color-white);
-  margin-bottom: 10px;
+  margin-bottom: var(--spacer);
+  transition: 0.350;
+}
+
+.footer__navigation ul {
   width: max-content;
 }
 
@@ -87,4 +96,14 @@
 .signup form button:hover {
   color: var(--color-red-active);
   transition-duration: .350s;
+}
+
+.signup form button i {
+  margin-left: 5px;
+  transition-duration: .350s;
+}
+
+.signup form button:hover i {
+  transform: translateX(5px);
+  transition-duration: 0.350s;
 }

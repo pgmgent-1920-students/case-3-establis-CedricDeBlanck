@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or site.title }} | {{ subdomain or site.subdomain }} | {{ domain or site.domain }}</title>
+    <title>{{ title or site.title }} | {{ domain or site.domain }}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="{{ '/static/css/main.css' | url }}">
@@ -23,6 +23,8 @@
     <script src="{{ '/static/js/team.js' | url}}"></script>
     <script src="{{ '/static/js/projecten.js' | url}}"></script>
     <script src="{{ '/static/js/aboutus.js' | url}}"></script>
+    <script src="{{ '/static/js/reasons.js' | url}}"></script>
+
     <script src="https://kit.fontawesome.com/8a1b33090c.js" crossorigin="anonymous"></script>
 </body>
 

@@ -1,7 +1,6 @@
 .werken_bij_ons {
   color: var(--color-blue-cyan);
   width: 520px;
-  margin-left: calc(var(--gutter)*6);
   margin-top: calc(var(--gutter)*2);
 }
 
@@ -52,4 +51,18 @@
   width: 920px;
   height: 517px;
   margin: calc(var(--gutter)*2) auto calc(var(--gutter)*6) auto;
+}
+
+.profiles {
+  color: var(--color-blue-cyan);
+}
+
+.reason {
+  display: flex;
+  width: 100%;
+}
+
+.reason img {
+  width: 480px;
+  height: 600px;
 }

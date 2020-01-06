@@ -25,7 +25,6 @@
   flex-wrap: wrap;
   position: relative;
   margin-left: calc(var(--spacer) + 8px);
-  z-index: -999;
   margin-bottom: calc(var(--spacer)*15);
 }
 
@@ -58,5 +57,17 @@
 }
 
 .team__hover:hover {
+  opacity: 0;
+}
+
+.membercontent {
+  position: absolute;
+  width: 205px;
+  height: 260px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+.membercontent:hover {
   opacity: 0;
 }

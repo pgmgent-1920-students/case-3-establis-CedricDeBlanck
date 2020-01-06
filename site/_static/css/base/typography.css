@@ -5,8 +5,9 @@ body {
 }
 
 p {
-  margin-bottom: 1.4em;
-  line-height: 25px;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin-bottom: 20px;
 }
 
 a {
@@ -19,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: var(--font-size-h2);
+  font-family: 'ITC Lubalin Graph Std',Arial,sans-serif;
   letter-spacing: .6px;
 }
 
