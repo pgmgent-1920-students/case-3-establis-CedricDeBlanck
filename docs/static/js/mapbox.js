@@ -38,7 +38,7 @@ var geojson = {
       },
       properties: {
         title: 'Mapbox',
-        description: 'Washington, D.C.'
+        description: 'Roeselare'
       }
     },
     {
@@ -49,7 +49,7 @@ var geojson = {
       },
       properties: {
         title: 'Mapbox',
-        description: 'San Francisco, California'
+        description: 'Antwerpen'
       }
     }
   ]
