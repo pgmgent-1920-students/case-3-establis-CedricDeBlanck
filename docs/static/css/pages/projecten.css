@@ -106,6 +106,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition-duration: .4s;
 }
 
 .project__hover:hover {
@@ -121,17 +122,6 @@
 
 .active__project {
   color: var(--color-red-active);
-}
-
-.inladen{
-  display: block;
-  transition: opacity .2s;
-  font-size: 1.2em;
-}
-
-.inladen-hidden {
-  animation: opacity 0.4s;
-  animation-delay: 1s;
 }
 
 @media only screen and (max-width: 1200px)  {
