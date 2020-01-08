@@ -23,6 +23,25 @@ map.on('load', function () {
       new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(map);
+
+      // create the popup
+      var popup = new mapboxgl.Popup({
+        offset: 25
+      }).setText(
+        'Roeselare'
+      );
+
+      var coords = [3.167713, 50.976685];
+
+      // create DOM element for the marker
+      var el = document.createElement('div');
+      el.id = 'marker';
+
+      // create the marker
+      new mapboxgl.Marker(el)
+        .setLngLat(coords)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
     });
   });
 });

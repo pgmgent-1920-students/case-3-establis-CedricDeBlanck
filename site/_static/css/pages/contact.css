@@ -42,6 +42,15 @@
   cursor: pointer;
 }
 
+.mapboxgl-marker {
+  background-repeat: no-repeat;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
 
 @media only screen and (max-width: 1200px)  {
   .contact-info {
