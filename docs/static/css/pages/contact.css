@@ -42,3 +42,30 @@
   cursor: pointer;
 }
 
+
+@media only screen and (max-width: 1200px)  {
+  .contact-info {
+    margin: calc(var(--gutter)*2) calc(var(--spacer)*4.5);
+  }
+
+  .contact-roeselare {
+    margin-bottom: calc(var(--gutter)*2);
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .contact-page, .contact-info {
+    display: block;
+  }
+
+  .contact-info {
+    margin: calc(var(--gutter)*2) calc(var(--spacer)*4.5);
+  }
+
+  .contact-roeselare {
+    margin-bottom: calc(var(--gutter)*2);
+  }
+} 
+
+

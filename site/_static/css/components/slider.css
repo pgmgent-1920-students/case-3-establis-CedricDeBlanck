@@ -45,18 +45,18 @@
   height: 15px;
   z-index: 99999;
   margin-left: calc(var(--spacer)*16);
-  margin-top: calc(var(--gutter)*12);
+  margin-top: calc(var(--gutter)*13);
   width: 100px;
 }
 
 .slider_square_button button {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   display: inline-block;
   border: 1px solid white;
   z-index: 99999;
   background: transparent;
-  margin-right: 10px;
+  margin-right: 7px;
   cursor: pointer;
 }
 
@@ -132,4 +132,17 @@
 .header-button1:hover,.header-button2:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 800px)  {
+  .slider-image1,.slider-image2,.slider-image3 {
+    height: 80vh;
+  }
+  .slider_square_button {
+    margin-top: calc(var(--gutter)*12);
+    margin-left: calc(var(--gutter)*2.9);
+  }
+  .header-button {
+    top: 75.8vh;
+  }
+} 
 

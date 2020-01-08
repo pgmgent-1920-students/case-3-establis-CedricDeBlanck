@@ -1,10 +1,10 @@
 /* 
-
-
 Line 12  : 6 Reasons -> Werken bij ons
 Line 61  : Diensten -> Over ons
 Line 108 : Team Data -> Team
 Line 166 : Projecten -> projecten
+Line 220 : Nieuws -> Niews
+Line 440 : Projecten -> PPS/DBFM
 
 
 */
@@ -21,9 +21,9 @@ Line 166 : Projecten -> projecten
     cacheElements() {
       this.reasonListElement = document.querySelector('.reasons');
     },
-    loadReasons () {
+    loadReasons() {
       // eslint-disable-next-line no-undef
-      Ajax.fetchJsonByHandlers(`../static/data/reasons.json`,
+      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/reasons.json`,
         (data) => {
           this.reasonData = data;
           this.generateUIForReasons();
@@ -70,9 +70,9 @@ Line 166 : Projecten -> projecten
     cacheElements() {
       this.aboutListElement = document.querySelector('.aboutus_diensten');
     },
-    loadDiensten () {
+    loadDiensten() {
       // eslint-disable-next-line no-undef
-      Ajax.fetchJsonByHandlers(`../static/data/diensten.json`,
+      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/diensten.json`,
         (data) => {
           this.aboutData = data;
           this.generateUIForDiensten();
@@ -87,7 +87,7 @@ Line 166 : Projecten -> projecten
         let aboutElement = null;
         this.aboutData.forEach((aboutus, index) => {
           aboutElement = document.createElement('div');
-          aboutElement.classList.add('g-fb-col-12','g-fb-col-xl-4');
+          aboutElement.classList.add('g-fb-col-12', 'g-fb-col-xl-4');
           aboutElement.innerHTML = `
           <div class="diensten">
           <picture>
@@ -163,7 +163,7 @@ Line 166 : Projecten -> projecten
   app.initialize();
 })();
 
-// Projecten -> projecten
+// Projecten -> projecten 
 
 (() => {
   const app = {
@@ -180,43 +180,35 @@ Line 166 : Projecten -> projecten
       Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?langcode=nl`,
         (data) => {
           this.projectData = data;
-          this.generateUIForTeam();
+          this.generateUIForProjects();
         },
         (error) => {
           console.log(error);
         });
     },
-    generateUIForTeam() {
+    generateUIForProjects() {
       if (this.projectData !== null && this.projectListElement !== null) {
         console.log(this.projectData);
-        let teamElement = null;
+        let projectElement = null;
         this.projectData.forEach((project, index) => {
           projectElement = document.createElement('div');
-          projectElement.classList.add('g-fb-col-12', 'g-fb-col-sm-6', 'g-fb-col-md-4', 'g-fb-col-lg-3', 'g-fb-col-xl-2');
+          projectElement.classList.add('project');
           projectElement.innerHTML = `
-            <article>
-              ${project.field_address}
-              ${project.field_architect}
-              ${project.field_build_time}
-              ${project.field_city}
-              ${project.field_contractor}
-              ${project.field_copyright}
-              ${project.field_project_type}
-              ${project.field_surface}
-              ${project.langcode}
-              ${project.title}
-              <picture>
-              <img src= http://www.establis.eu/${project.field_gallery_images}>
-              </picture>
-              <picture>
-              <img src= http://www.establis.eu/${project.field_image}>
-              </picture>
-              <picture>
-              <img src= http://www.establis.eu/${project.field_image_1}>
-              </picture>
-             
-            </article>
-            </br>
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${project.field_city}</p>
+                <p>${project.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <picture>
+            <img src= http://www.establis.eu/${project.field_image}>
+          </picture>     
+          
           `;
           this.projectListElement.appendChild(projectElement);
         });
@@ -225,3 +217,443 @@ Line 166 : Projecten -> projecten
   };
   app.initialize();
 })();
+
+// Nieuws -> nieuws
+
+(() => {
+  const app = {
+    initialize() {
+      this.newsData = null;
+      this.cacheElements();
+      this.loadNews();
+    },
+    cacheElements() {
+      this.newsListElement = document.querySelector('.newspage');
+    },
+    async loadNews() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/news?langcode=nl`,
+        (data) => {
+          this.newsData = data;
+          this.generateUIForNews();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForNews() {
+      if (this.newsData !== null && this.newsListElement !== null) {
+        console.log(this.newsData);
+        let newsElement = null;
+        this.newsData.forEach((news, index) => {
+          newsElement = document.createElement('div');
+          newsElement.classList.add('news');
+          newsElement.innerHTML = `
+          <div class="news__hover">
+            <div class="news__text">
+              <div class="news__titleandcity">
+                <p></p>
+                <p>${news.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${news.field_image}>
+          </picture>
+          `;
+          this.newsListElement.appendChild(newsElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+
+
+//Renovatie
+
+(() => {
+  const app = {
+    initialize() {
+      this.renovatieData = null;
+      this.cacheElements();
+      this.loadRenovatie();
+    },
+    cacheElements() {
+      this.renovatieListElement = document.querySelector('.renovatie');
+    },
+    async loadRenovatie() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/renovatie.json`,
+        (data) => {
+          this.renovatieData = data;
+          this.generateUIForRenovatie();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForRenovatie() {
+      if (this.renovatieData !== null && this.renovatieListElement !== null) {
+        console.log(this.renovatieData);
+        let renovatieElement = null;
+        this.renovatieData.forEach((renovatie, index) => {
+          renovatieElement = document.createElement('div');
+          renovatieElement.classList.add('project');
+          renovatieElement.innerHTML = `
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${renovatie.field_city}</p>
+                <p>${renovatie.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${renovatie.field_image}>
+          </picture>
+          `;
+          this.renovatieListElement.appendChild(renovatieElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+
+
+//Residentieel
+
+(() => {
+  const app = {
+    initialize() {
+      this.residentieelData = null;
+      this.cacheElements();
+      this.loadResidentieel();
+    },
+    cacheElements() {
+      this.residentieelListElement = document.querySelector('.residentieel');
+    },
+    async loadResidentieel() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?field_project_type_target_id=17`,
+        (data) => {
+          this.residentieelData = data;
+          this.generateUIForResidentieel();
+        },
+        (error) => {
+          console.log(error);RenovatieNews
+        });
+    },
+    generateUIForResidentieel() {
+      if (this.residentieelData !== null && this.residentieelListElement !== null) {
+        console.log(this.residentieelData);
+        let residentieelElement = null;
+        this.residentieelData.forEach((residentieel, index) => {
+          residentieelElement = document.createElement('div');
+          residentieelElement.classList.add('project');
+          residentieelElement.innerHTML = `
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${residentieel.field_city}</p>
+                <p>${residentieel.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${residentieel.field_image}>
+          </picture>
+          `;
+          this.residentieelListElement.appendChild(residentieelElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+//utilitair
+
+(() => {
+  const app = {
+    initialize() {
+      this.utilitairData = null;
+      this.cacheElements();
+      this.loadutilitair();
+    },
+    cacheElements() {
+      this.utilitairListElement = document.querySelector('.utilitair');
+    },
+    async loadutilitair() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?field_project_type_target_id=14`,
+        (data) => {
+          this.utilitairData = data;
+          this.generateUIForutilitair();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForutilitair() {
+      if (this.utilitairData !== null && this.utilitairListElement !== null) {
+        console.log(this.utilitairData);
+        let utilitairElement = null;
+        this.utilitairData.forEach((utilitair, index) => {
+          utilitairElement = document.createElement('div');
+          utilitairElement.classList.add('project');
+          utilitairElement.innerHTML = `
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${utilitair.field_city}</p>
+                <p>${utilitair.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${utilitair.field_image}>
+          </picture>
+          `;
+          this.utilitairListElement.appendChild(utilitairElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+//PPS/DBFM
+
+(() => {
+  const app = {
+    initialize() {
+      this.ppsdbfmData = null;
+      this.cacheElements();
+      this.loadppsdbfm();
+    },
+    cacheElements() {
+      this.ppsdbfmListElement = document.querySelector('.ppsdbfm');
+    },
+    async loadppsdbfm() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/ppsdbfm.json`,
+        (data) => {
+          this.ppsdbfmData = data;
+          this.generateUIForppsdbfm();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForppsdbfm() {
+      if (this.ppsdbfmData !== null && this.ppsdbfmListElement !== null) {
+        console.log(this.ppsdbfmData);
+        let ppsdbfmElement = null;
+        this.ppsdbfmData.forEach((ppsdbfm, index) => {
+          ppsdbfmElement = document.createElement('div');
+          ppsdbfmElement.classList.add('project');
+          ppsdbfmElement.innerHTML = `
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${ppsdbfm.field_city}</p>
+                <p>${ppsdbfm.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${ppsdbfm.field_image}>
+          </picture>
+          `;
+          this.ppsdbfmListElement.appendChild(ppsdbfmElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+//Industrieel
+
+(() => {
+  const app = {
+    initialize() {
+      this.industrieelData = null;
+      this.cacheElements();
+      this.loadIndustrial();
+    },
+    cacheElements() {
+      this.industrieelListElement = document.querySelector('.industrieel');
+    },
+    async loadIndustrial() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?field_project_type_target_id=3`,
+        (data) => {
+          this.industrieelData = data;
+          this.generateUIForNews();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForNews() {
+      if (this.industrieelData !== null && this.industrieelListElement !== null) {
+        console.log(this.industrieelData);
+        let industrieelElement = null;
+        this.industrieelData.forEach((industrieel, index) => {
+          industrieelElement = document.createElement('div');
+          industrieelElement.classList.add('project');
+          industrieelElement.innerHTML = `
+          <div class="project__hover">
+            <div class="project__text">
+              <div class="project__titleandcity">
+                <p>${industrieel.field_city}</p>
+                <p>${industrieel.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${industrieel.field_image}>
+          </picture>
+          `;
+          this.industrieelListElement.appendChild(industrieelElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+
+//nieuws -> pers
+
+(() => {
+  const app = {
+    initialize() {
+      this.persData = null;
+      this.cacheElements();
+      this.loadpers();
+    },
+    cacheElements() {
+      this.persListElement = document.querySelector('.pers');
+    },
+    async loadpers() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/news?field_news_type_target_id=1`,
+        (data) => {
+          this.persData = data;
+          this.generateUIForNews();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForNews() {
+      if (this.persData !== null && this.persListElement !== null) {
+        console.log(this.persData);
+        let persElement = null;
+        this.persData.forEach((pers, index) => {
+          persElement = document.createElement('div');
+          persElement.classList.add('news');
+          persElement.innerHTML = `
+          <div class="news__hover">
+            <div class="news__text">
+              <div class="news__titleandcity">
+                <p></p>
+                <p>${pers.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${pers.field_image}>
+          </picture>
+          `;
+          this.persListElement.appendChild(persElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+//nieuws -> nieuws
+
+(() => {
+  const app = {
+    initialize() {
+      this.nieuwsdata = null;
+      this.cacheElements();
+      this.loadnieuws();
+    },
+    cacheElements() {
+      this.nieuwsListElement = document.querySelector('.nieuws');
+    },
+    async loadnieuws() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/news?field_news_type_target_id=2`,
+        (data) => {
+          this.nieuwsdata = data;
+          this.generateUIForNews();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForNews() {
+      if (this.nieuwsdata !== null && this.nieuwsListElement !== null) {
+        console.log(this.nieuwsdata);
+        let nieuwsElement = null;
+        this.nieuwsdata.forEach((pers, index) => {
+          nieuwsElement = document.createElement('div');
+          nieuwsElement.classList.add('news');
+          nieuwsElement.innerHTML = `
+          <div class="news__hover">
+            <div class="news__text">
+              <div class="news__titleandcity">
+                <p></p>
+                <p>${pers.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${pers.field_image}>
+          </picture>
+          `;
+          this.nieuwsListElement.appendChild(nieuwsElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+
+

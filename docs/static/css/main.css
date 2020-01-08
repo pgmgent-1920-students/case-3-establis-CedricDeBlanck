@@ -8,9 +8,12 @@
 @import "layout/header.css";
 @import "components/navigation.css";
 @import "components/slider.css";
+@import "base/keyframes.css";
 @import "pages/home.css";
 @import "pages/overons.css";
+@import "pages/projecten.css";
 @import "pages/team.css";
 @import "pages/duurzaamheid.css";
 @import "pages/werkenbijons.css";
+@import "pages/nieuws.css";
 @import "pages/contact.css";

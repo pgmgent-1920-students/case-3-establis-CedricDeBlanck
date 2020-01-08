@@ -20,3 +20,7 @@ textarea, select, input, button {
   width: 1000px;
   margin: 0 auto;
 }
+
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}

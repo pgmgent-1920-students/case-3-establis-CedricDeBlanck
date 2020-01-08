@@ -37,3 +37,9 @@ h2 {
   color: #d4092d;
 }
 
+a:hover {
+  color: var(--color-red-hover);
+  transition: .4s;
+}
+
+

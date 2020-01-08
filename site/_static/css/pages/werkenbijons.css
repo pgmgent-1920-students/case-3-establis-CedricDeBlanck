@@ -48,7 +48,7 @@
   background-image: url(../../images/team_home.jpg);
   background-position: center;
   background-size: cover;
-  width: 920px;
+  width: 60%;
   height: 517px;
   margin: calc(var(--gutter)*2) auto calc(var(--gutter)*6) auto;
 }
@@ -127,3 +127,32 @@
 .reason:nth-of-type(6) img {
   height: 438px;
 }
+
+@media only screen and (max-width: 1000px)  {
+  .reason {
+    display: block;
+    width: 80%;
+  }
+
+  .container__1000 {
+    margin-left: calc(var(--gutter)*3);
+  }
+
+  .overtuigd {
+    margin-left: calc(var(--gutter)*2);
+  }
+
+  .overtuigd_bottom {
+    display: block;
+    margin-left: -80px;
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+
+} 
+
+@media only screen and (max-width: 600px)  {
+
+} 

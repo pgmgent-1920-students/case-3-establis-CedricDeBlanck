@@ -1,0 +1,189 @@
+.project__main {
+  display: flex;
+  width: 96.1%;
+}
+
+.project__title {
+  margin-left: calc(var(--gutter)*7.4);
+  margin-top: calc(var(--gutter)*2);
+  color: var(--color-blue-cyan);
+}
+
+.project__categories {
+  margin-left: calc(var(--gutter)*1.5);
+  margin-top: calc(var(--gutter)*2);
+}
+
+.project__categories a {
+  color: var(--color-grey-300);
+  line-height: var(--gutter);
+}
+
+.project__navtitle h3 {
+  color: var(--color-blue-cyan);
+  margin-bottom: var(--spacer);
+  width: 170px;
+}
+
+.projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel{
+  margin-left: calc(var(--gutter)*7.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  margin-bottom: calc(var(--gutter)*5);
+}
+
+.project__text {
+  position: absolute;
+  bottom: calc(var(--spacer));
+  left: calc(var(--spacer)*2);
+  z-index: 10;
+  color: var(--color-white);
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  background-color:rgba(0, 0, 0, .5) 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  width: 97.5%;
+  height: 97%;
+}
+
+.project img {
+  width: 484px;
+  margin-right: calc(var(--spacer));
+  position: relative;
+  margin-bottom: calc(var(--spacer) - 5px);
+  overflow: hidden;
+  transition: .4s;
+}
+
+.project:hover img  {
+  transform: scale(1.1);
+  transition: 1s
+}
+
+.project__titleandcity p:first-child {
+  font-size: 16px;
+  margin-bottom: 0px;
+  z-index: -1;
+}
+
+.project__text {
+  padding-bottom: 50px;
+  transform: translate(0, 50px);
+  transition: transform .4s;
+  left: var(--spacer);
+  opacity: 1;
+}
+
+.project:hover .project__text {
+  transform: translate(0, 0);
+  z-index: 999999;
+}
+
+.project__hover > .project__text > .read-more {
+  font-size: 16px;
+  z-index: -99999;
+  bottom: calc(var(--spacer)*2);
+  position: absolute;
+  width: 300px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.project__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.project__hover:hover {
+  opacity: 1;
+  transition: opacity .4s;
+  background:rgba(21,45,58,.8);
+}
+
+.project__hover:hover > .project__text > .read-more {
+  opacity: 1;
+  transition: opacity .4s;
+}
+
+.active__project {
+  color: var(--color-red-active);
+}
+
+.inladen{
+  display: block;
+  transition: opacity .2s;
+  font-size: 1.2em;
+}
+
+.inladen-hidden {
+  animation: opacity 0.4s;
+  animation-delay: 1s;
+}
+
+@media only screen and (max-width: 1200px)  {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
+    margin-left: calc(var(--gutter)*7.4);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+  }
+
+  .news {
+    width: 480px;
+  }
+
+  .news__total ul {
+    margin-left: calc(var(--gutter)*7.5);
+  }
+} 
+
+@media only screen and (max-width: 1000px)  {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
+  margin-left: calc(var(--gutter)*2);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-evenly;
+  }
+
+  .project {
+    width: 480px;
+  }
+  .project__title {
+    margin-left: calc(var(--gutter)*2);
+  }
+  .news__total ul {
+    margin-left: calc(var(--gutter)*2);
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
+  margin-left: calc(var(--gutter)*1);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-evenly;
+  }
+
+  .project {
+    width: 480px;
+  }
+
+  .project__title {
+    margin-left: calc(var(--gutter)*1.5);
+  }
+} 

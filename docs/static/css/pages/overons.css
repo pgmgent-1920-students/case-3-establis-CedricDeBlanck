@@ -7,10 +7,6 @@
   height: 578px;
 }
 
-.boutus_header {
-  position: absolute;
-}
-
 .aboutus_header_image {
   height: 100px;
 }
@@ -119,3 +115,58 @@
   font-family: proxima-nova,Arial,sans-serif;
   color: var(--color-grey-600);
 }
+
+@media only screen and (max-width: 1200px)  {
+  .aboutus_image {
+    height: 500px;
+  }
+  .aboutus_diensten {
+    margin: calc(var(--gutter)*15) auto 0px calc(var(--gutter)*8);
+  }
+
+  .aboutus_text_section2 {
+    width: 80%;
+  }
+
+  .aboutus_text {
+    display: block;
+  }
+  .aboutus_image{
+    width: 100%;
+  }
+  .aboutus_innertext {
+    margin-top: var(--gutter);
+    margin-left: calc(var(--gutter)*2.7);
+
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .aboutus_image {
+    height: 300px;
+  }
+
+  .aboutus_content {
+    left: var(--gutter);
+    top: calc(var(--gutter)*3)
+  }
+
+  .aboutus_diensten {
+    margin: calc(var(--gutter)*15) auto 0px calc(var(--gutter)*5);
+  }
+} 
+
+@media only screen and (max-width: 600px)  {
+  .aboutus_image {
+    height: 300px;
+  }
+
+  .aboutus_content h2 {
+    font-size: 25px;
+  }
+
+  .aboutus_content {
+    left: calc(var(--gutter) + 18px);
+  }
+} 

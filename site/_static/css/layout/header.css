@@ -1,4 +1,4 @@
-.logo > a {
+.logo>a {
   background: url('../../images/logo.svg') no-repeat center center;
   background-size: cover;
   display: block;
@@ -13,3 +13,18 @@
   z-index: 9999999;
 
 }
+
+@media only screen and (max-width: 1200px) {
+  .logo>a {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+  @media only screen and (max-width: 800px) {
+    .logo>a {
+      width: 100px;
+      height: 100px;
+    }
+  }
