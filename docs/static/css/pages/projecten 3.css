@@ -1,38 +1,39 @@
-.news__main {
+.project__main {
   display: flex;
   width: 96.1%;
 }
 
-.news__title {
+.project__title {
   margin-left: calc(var(--gutter)*7.4);
   margin-top: calc(var(--gutter)*2);
   color: var(--color-blue-cyan);
 }
 
-.news__categories {
+.project__categories {
   margin-left: calc(var(--gutter)*1.5);
   margin-top: calc(var(--gutter)*2);
 }
 
-.news__categories a {
+.project__categories a {
   color: var(--color-grey-300);
   line-height: var(--gutter);
 }
 
-.news__navtitle h3 {
+.project__navtitle h3 {
   color: var(--color-blue-cyan);
   margin-bottom: var(--spacer);
+  width: 170px;
 }
 
-.newspage, .nieuws ,.pers {
+.projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel{
   margin-left: calc(var(--gutter)*7.4);
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
-  padding-bottom: var(--gutter);
+  margin-bottom: calc(var(--gutter)*5);
 }
 
-.news__text {
+.project__text {
   position: absolute;
   bottom: calc(var(--spacer));
   left: calc(var(--spacer)*2);
@@ -48,36 +49,34 @@
   z-index: 10;
 }
 
-.news {
+.project {
   position: relative;
   overflow: hidden;
   width: 97.5%;
-  height: 270px;
-  margin-bottom: var(--spacer)
+  height: 97%;
 }
 
-.news img {
+.project img {
   width: 484px;
   margin-right: calc(var(--spacer));
   position: relative;
   margin-bottom: calc(var(--spacer) - 5px);
   overflow: hidden;
   transition: .4s;
-  box-sizing: border-box;
 }
 
-.news:hover img  {
+.project:hover img  {
   transform: scale(1.1);
   transition: 1s
 }
 
-.news__titleandcity p:first-child {
+.project__titleandcity p:first-child {
   font-size: 16px;
   margin-bottom: 0px;
   z-index: -1;
 }
 
-.news__text {
+.project__text {
   padding-bottom: 50px;
   transform: translate(0, 50px);
   transition: transform .4s;
@@ -85,12 +84,12 @@
   opacity: 1;
 }
 
-.news:hover .news__text {
+.project:hover .project__text {
   transform: translate(0, 0);
   z-index: 999999;
 }
 
-.news__hover > .news__text > .read-more {
+.project__hover > .project__text > .read-more {
   font-size: 16px;
   z-index: -99999;
   bottom: calc(var(--spacer)*2);
@@ -100,67 +99,37 @@
   z-index: -1;
 }
 
-.news__hover {
+.project__hover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition-duration: .4s;
 }
 
-.news__hover:hover {
+.project__hover:hover {
   opacity: 1;
   transition: opacity .4s;
   background:rgba(21,45,58,.8);
 }
 
-.news__hover:hover > .news__text > .read-more {
+.project__hover:hover > .project__text > .read-more {
   opacity: 1;
   transition: opacity .4s;
 }
 
-.news__total ul {
-  display: flex;
-  text-align: center;
-  margin-left: calc(var(--gutter)*15);
-}
-
-.newsactive  {
-  color: var(--color-white);
-  background-color: var(--color-red-active);
-  padding: 0px 5px 5px 5px;
-}
-
-.newsactive li {
-  color: var(--color-white);
-}
-
-.news__total > ul > a  {
-  margin-right: calc(var(--spacer)*1.5);
-  color: var(--color-blue-cyan);
-  padding-top: 5px;
-}
-
-.news__total > ul > a:hover {
-  text-decoration: underline;
-}
-
-.news__total {
-  margin-bottom: calc(var(--gutter)*5);
-}
-
-.news__total .news__dots {
-  margin-top: 5px;
-  margin-right: calc(var(--spacer)*1.5);
-}
-
-.active__news {
+.active__project {
   color: var(--color-red-active);
 }
 
+.project__categories ul > a > li {
+display: inline-block;
+}
+
 @media only screen and (max-width: 1200px)  {
-  .newspage, .nieuws ,.pers {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
     margin-left: calc(var(--gutter)*7.4);
     display: grid;
     grid-template-columns: 1fr;
@@ -177,17 +146,17 @@
 } 
 
 @media only screen and (max-width: 1000px)  {
-  .newspage, .nieuws, .pers {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
   margin-left: calc(var(--gutter)*2);
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-evenly;
   }
 
-  .news {
+  .project {
     width: 480px;
   }
-  .news__title {
+  .project__title {
     margin-left: calc(var(--gutter)*2);
   }
   .news__total ul {
@@ -197,18 +166,18 @@
 
 
 @media only screen and (max-width: 800px)  {
-  .newspage, .nieuws, .pers {
+  .projects, .renovatie, .residentieel, .utilitair, .ppsdbfm, .industrieel {
   margin-left: calc(var(--gutter)*1);
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-evenly;
   }
 
-  .news {
+  .project {
     width: 480px;
   }
 
-  .news__title {
+  .project__title {
     margin-left: calc(var(--gutter)*1.5);
   }
 } 

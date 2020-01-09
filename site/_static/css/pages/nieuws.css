@@ -29,6 +29,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
+  padding-bottom: var(--gutter);
 }
 
 .news__text {
@@ -53,10 +54,6 @@
   width: 97.5%;
   height: 270px;
   margin-bottom: var(--spacer)
-}
-
-.newspage {
-  margin-bottom: var(--gutter);
 }
 
 .news img {

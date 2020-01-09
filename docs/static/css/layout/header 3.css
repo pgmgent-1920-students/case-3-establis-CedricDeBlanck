@@ -1,0 +1,30 @@
+.logo>a {
+  background: url('../../images/logo.svg') no-repeat center center;
+  background-size: cover;
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  text-indent: -999rem;
+}
+
+.logo {
+  margin-left: -16px;
+  z-index: 9999999;
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo>a {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+  @media only screen and (max-width: 800px) {
+    .logo>a {
+      width: 100px;
+      height: 100px;
+    }
+  }
