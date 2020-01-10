@@ -203,7 +203,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${project.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -244,11 +244,13 @@ Line 440 : Projecten -> PPS/DBFM
         });
     },
     generateUIForNews() {
+      
       if (this.newsData !== null && this.newsListElement !== null) {
         console.log(this.newsData);
         let newsElement = null;
         this.newsData.forEach((news, index) => {
-          newsElement = document.createElement('div');
+          newsElement = document.createElement('a');
+          newsElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/nieuws/nieuws-detail?project-id=${index}`)
           newsElement.classList.add('news');
           newsElement.innerHTML = `
           <div class="news__hover">
@@ -258,7 +260,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${news.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/nieuws/nieuws/nieuws-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -301,10 +303,11 @@ Line 440 : Projecten -> PPS/DBFM
     },
     generateUIForRenovatie() {
       if (this.renovatieData !== null && this.renovatieListElement !== null) {
-        console.log(this.renovatieData);
+        console.log(this.projectData);
         let renovatieElement = null;
         this.renovatieData.forEach((renovatie, index) => {
-          renovatieElement = document.createElement('div');
+          renovatieElement = document.createElement('a');
+          renovatieElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/renovatie/project-detail?project-id=${index}`)
           renovatieElement.classList.add('project');
           renovatieElement.innerHTML = `
           <div class="project__hover">
@@ -314,7 +317,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${renovatie.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/renovatie/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -360,7 +363,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.residentieelData);
         let residentieelElement = null;
         this.residentieelData.forEach((residentieel, index) => {
-          residentieelElement = document.createElement('div');
+          residentieelElement = document.createElement('a');
+          residentieelElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/residentieel/project-detail?project-id=${index}`)
           residentieelElement.classList.add('project');
           residentieelElement.innerHTML = `
           <div class="project__hover">
@@ -370,7 +374,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${residentieel.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/residentieel/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -414,7 +418,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.utilitairData);
         let utilitairElement = null;
         this.utilitairData.forEach((utilitair, index) => {
-          utilitairElement = document.createElement('div');
+          utilitairElement = document.createElement('a');
+          utilitairElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/utilitair/project-detail?project-id=${index}`)
           utilitairElement.classList.add('project');
           utilitairElement.innerHTML = `
           <div class="project__hover">
@@ -424,7 +429,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${utilitair.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -468,7 +473,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.ppsdbfmData);
         let ppsdbfmElement = null;
         this.ppsdbfmData.forEach((ppsdbfm, index) => {
-          ppsdbfmElement = document.createElement('div');
+          ppsdbfmElement = document.createElement('a');
+          ppsdbfmElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/ppsdbfm/project-detail?project-id=${index}`)
           ppsdbfmElement.classList.add('project');
           ppsdbfmElement.innerHTML = `
           <div class="project__hover">
@@ -478,7 +484,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${ppsdbfm.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/ppsdbfm/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -522,7 +528,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.industrieelData);
         let industrieelElement = null;
         this.industrieelData.forEach((industrieel, index) => {
-          industrieelElement = document.createElement('div');
+          industrieelElement = document.createElement('a');
+          industrieelElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/industrieel/project-detail?project-id=${index}`)
           industrieelElement.classList.add('project');
           industrieelElement.innerHTML = `
           <div class="project__hover">
@@ -532,7 +539,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${industrieel.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/industrieel/project-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -577,7 +584,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.persData);
         let persElement = null;
         this.persData.forEach((pers, index) => {
-          persElement = document.createElement('div');
+          persElement = document.createElement('a');
+          persElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/nieuws/pers/nieuws-detail?project-id=${index}`)
           persElement.classList.add('news');
           persElement.innerHTML = `
           <div class="news__hover">
@@ -587,7 +595,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${pers.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/nieuws/pers/nieuws-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -603,7 +611,7 @@ Line 440 : Projecten -> PPS/DBFM
   app.initialize();
 })();
 
-//nieuws -> nieuws
+//nieuws -> nieuws/nieuws
 
 (() => {
   const app = {
@@ -631,7 +639,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.nieuwsdata);
         let nieuwsElement = null;
         this.nieuwsdata.forEach((pers, index) => {
-          nieuwsElement = document.createElement('div');
+          nieuwsElement = document.createElement('a');
+          nieuwsElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/nieuws/nieuws/nieuws-detail?project-id=${index}`)
           nieuwsElement.classList.add('news');
           nieuwsElement.innerHTML = `
           <div class="news__hover">
@@ -641,7 +650,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${pers.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="http://www.establis.eu/case-3-establis-CedricDeBlanck/nieuws/nieuws/nieuws-detail?project-id=${index}">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -687,6 +696,7 @@ Line 440 : Projecten -> PPS/DBFM
         let leiderElement = null;
         this.leiderdata.forEach((leider, index) => {
           leiderElement = document.createElement('div');
+          projectElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/werken-bij-ons/jobs?job-id=${index}`)
           leiderElement.classList.add('news');
           leiderElement.innerHTML = `
           <div class="news__hover">

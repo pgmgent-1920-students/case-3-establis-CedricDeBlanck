@@ -159,6 +159,16 @@
   color: var(--color-red-active);
 }
 
+.news_image {
+  width: 1000px;
+}
+
+.news_image img {
+  width: 100%;
+  height: 100%;
+
+}
+
 @media only screen and (max-width: 1200px)  {
   .newspage, .nieuws ,.pers {
     margin-left: calc(var(--gutter)*7.4);

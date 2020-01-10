@@ -30,6 +30,7 @@
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
   margin-bottom: calc(var(--gutter)*5);
+  width: 900px;
 }
 
 .project__text {
@@ -51,7 +52,7 @@
 .project {
   position: relative;
   overflow: hidden;
-  width: 97.5%;
+  width: 435px;
   height: 97%;
 }
 
@@ -115,6 +116,10 @@
 
 .active__project {
   color: var(--color-red-active);
+}
+
+a.project {
+  color: var(--color-white);
 }
 
 @media only screen and (max-width: 1200px)  {
