@@ -2,19 +2,46 @@
 layout: layouts/home.njk
 title: industrieel
 ---
-
+<div class="header_mobile">
+    <div class="mobile_top btn-toggle">
+        <h3>Categorie</h3>
+        <i class="fa fa-angle-down"></i>
+    </div>
+    <div class="filter-nav">
+        <ul class="nav_links">
+            <li><a href="../">overzicht</a></li>
+            <li><a href="../renovatie/">renovatie</a></li>
+            <li><a href="../residentieel/">residentieel</a></li>
+            <li><a href="../utilitair/">utilitair</a></li>
+            <li><a href="../ppsdbfm/">PPS/DBFM</a></li>
+            <li><a class="active__project" href="#">industrieel</a></li>
+        </ul>
+    </div>
+</div>
 <div class="project__main">
     <div class="project__categories">
         <div class="project__navtitle">
             <h3>projecten categorie</h3>
         </div>
         <ul>
-            <a href="../"><li>overzicht</li></a>
-            <a href="../renovatie/"><li>renovatie</li></a>
-            <a href="../residentieel/"><li>residentieel</li></a>
-            <a href="../utilitair/"><li>utilitair</li></a>
-            <a href="../ppsdbfm/"><li>PPS/DBFM</li></a>
-            <a href="#" ><li class="active__project">industrieel</li></a>
+            <a href="../">
+                <li>overzicht</li>
+            </a>
+            <a href="../renovatie/">
+                <li>renovatie</li>
+            </a>
+            <a href="../residentieel/">
+                <li>residentieel</li>
+            </a>
+            <a href="../utilitair/">
+                <li>utilitair</li>
+            </a>
+            <a href="../ppsdbfm/">
+                <li>PPS/DBFM</li>
+            </a>
+            <a href="#">
+                <li class="active__project">industrieel</li>
+            </a>
         </ul>
     </div>
     <div class="project__total">
@@ -25,3 +52,4 @@ title: industrieel
         <div class="industrieel"></div>
     </div>
 </div>
+<script src="{{ '/static/js/mobile_nav.js' | url}}"></script>

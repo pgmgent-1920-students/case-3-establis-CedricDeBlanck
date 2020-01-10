@@ -63,14 +63,19 @@
 }
 
 .red_line {
-  animation: headerLineSlideIn 1.4s ease forwards;
   background: #d4092d;
   width: 80px;
   height: 1px;
   margin-top: 20px;
   margin-bottom: 30px;
-  transform: translate(-100%,0);
   overflow: hidden;
+  animation-name: redline;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  animation-play-state: running;
 }
 
 .home_section_3 {
@@ -293,13 +298,6 @@ a {
 .header-text-lees-meer:hover i {
   transform: translate(5px, 0);
   transition-duration: 1s;
-}
-
-.redline {
-  border-bottom: 1px solid red;
-  width: 80px;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .header {

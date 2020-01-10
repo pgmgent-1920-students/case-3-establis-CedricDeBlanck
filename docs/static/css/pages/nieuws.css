@@ -11,6 +11,7 @@
 .news__categories {
   margin-left: calc(var(--gutter)*1.5);
   margin-top: calc(var(--gutter)*2);
+  width: 200px;
 }
 
 .news__categories a {
@@ -172,6 +173,9 @@
 
   .news__total ul {
     margin-left: calc(var(--gutter)*7.5);
+  }
+  .news__categories {
+    display: none;
   }
 } 
 

@@ -192,7 +192,8 @@ Line 440 : Projecten -> PPS/DBFM
         console.log(this.projectData);
         let projectElement = null;
         this.projectData.forEach((project, index) => {
-          projectElement = document.createElement('div');
+          projectElement = document.createElement('a');
+          projectElement.setAttribute('href', `/case-3-establis-CedricDeBlanck/projecten/project-detail?project-id=${index}`)
           projectElement.classList.add('project');
           projectElement.innerHTML = `
           <div class="project__hover">
@@ -710,6 +711,8 @@ Line 440 : Projecten -> PPS/DBFM
   };
   app.initialize();
 })();
+
+
 
 
 

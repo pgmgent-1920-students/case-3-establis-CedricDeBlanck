@@ -8,6 +8,7 @@
 @import "layout/header.css";
 @import "components/navigation.css";
 @import "components/slider.css";
+@import "components/movile_nav.css";
 @import "base/keyframes.css";
 @import "pages/home.css";
 @import "pages/overons.css";
