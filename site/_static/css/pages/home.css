@@ -33,6 +33,8 @@
 
 .read-more {
   display: inline-block;
+  transition: .350s;
+  z-index: 999999;
 }
 
 .read-more a {
@@ -42,14 +44,13 @@
 
 .read-more i {
   color: var(--color-red-active);
-  margin-left: var(--spacer);
   transform: translate(0px, 0);
   transition-duration: .350s;
 }
 
 .read-more > a:hover {
   color: #d4092d;
-  transition-duration: 1s;
+  transition-duration: .1s;
 }
 
 .read-more:hover i{
@@ -314,6 +315,7 @@ a {
   height: 200px;
   position: absolute;
   top: 0px;
+  z-index: 99999;
 }
 
 .header-blue {
@@ -388,7 +390,7 @@ a {
   justify-content: space-between;
   align-self: middle;
   top: 0px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .innertext_home_section_4 {
@@ -401,6 +403,7 @@ a {
   background-image: url(../../images/tivoli01.png);
   width: 100%;
   height: 389px;
+  background-size: cover;
 }
 
 .home_section_4_innertext_content {

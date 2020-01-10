@@ -1,0 +1,11 @@
+h2 {
+  font-family: 'ITC Lubalin Graph Std',Arial,sans-serif;
+}
+
+.fa, .fas {
+  font-family: 'Font Awesome 5 Free';
+}
+
+body {
+  font-family: var(--font-family-body);
+}

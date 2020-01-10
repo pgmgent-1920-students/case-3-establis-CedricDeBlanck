@@ -4,9 +4,8 @@
 }
 
 .news__title {
-  margin-left: calc(var(--gutter)*7.4);
-  margin-top: calc(var(--gutter)*2);
   color: var(--color-blue-cyan);
+  margin: calc(var(--gutter)*2) 0px calc(var(--gutter)*2) calc(var(--gutter)*7.4);
 }
 
 .news__categories {

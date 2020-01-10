@@ -11,6 +11,7 @@ Line 440 : Projecten -> PPS/DBFM
 
 //6 Reasons 
 
+
 (() => {
   const app = {
     initialize() {
@@ -201,7 +202,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${project.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -288,7 +289,7 @@ Line 440 : Projecten -> PPS/DBFM
     },
     async loadRenovatie() {
       // eslint-disable-next-line no-undef
-      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/renovatie.json`,
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?langcode=nl&field_project_type_target_id=16`,
         (data) => {
           this.renovatieData = data;
           this.generateUIForRenovatie();
@@ -312,7 +313,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${renovatie.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -368,7 +369,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${residentieel.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -422,7 +423,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${utilitair.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -452,7 +453,7 @@ Line 440 : Projecten -> PPS/DBFM
     },
     async loadppsdbfm() {
       // eslint-disable-next-line no-undef
-      Ajax.fetchJsonByHandlers(`/case-3-establis-CedricDeBlanck/static/data/ppsdbfm.json`,
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/projects?langcode=nl&field_project_type_target_id=15`,
         (data) => {
           this.ppsdbfmData = data;
           this.generateUIForppsdbfm();
@@ -476,7 +477,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${ppsdbfm.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -530,7 +531,7 @@ Line 440 : Projecten -> PPS/DBFM
                 <p>${industrieel.title}</p>
               </div>
               <div class="read-more read-more-color-white">
-                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+                <a href="/case-3-establis-CedricDeBlanck/projecten/utilitair/quatuor-building">Lees meer <i class="fa fa-long-arrow-right"></i></a>
               </div>
             </div>
           </div>     
@@ -654,6 +655,64 @@ Line 440 : Projecten -> PPS/DBFM
   };
   app.initialize();
 })();
+
+
+//6 reasons -> projectleider
+
+(() => {
+  const app = {
+    initialize() {
+      this.leiderdata = null;
+      this.cacheElements();
+      this.loadleider();
+    },
+    cacheElements() {
+      this.leiderListElement = document.querySelector('.projectleider');
+    },
+    async loadleider() {
+      // eslint-disable-next-line no-undef
+      Ajax.fetchJsonByHandlers(`https://establis.herokuapp.com/api/jobs?langcode=nl`,
+        (data) => {
+          this.leiderdata = data;
+          this.generateUIForNews();
+        },
+        (error) => {
+          console.log(error);
+        });
+    },
+    generateUIForNews() {
+      if (this.leiderdata !== null && this.leiderListElement !== null) {
+        console.log(this.leiderdata);
+        let leiderElement = null;
+        this.leiderdata.forEach((leider, index) => {
+          leiderElement = document.createElement('div');
+          leiderElement.classList.add('news');
+          leiderElement.innerHTML = `
+          <div class="news__hover">
+            <div class="news__text">
+              <div class="news__titleandcity">
+                <p></p>
+                <p>${leider.title}</p>
+              </div>
+              <div class="read-more read-more-color-white">
+                <a href="#">Lees meer <i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>     
+          <picture>
+            <img src= http://www.establis.eu/${leider.field_image}>
+          </picture>
+          `;
+          this.leiderListElement.appendChild(leiderElement);
+        });
+      }
+    },
+  };
+  app.initialize();
+})();
+
+
+
 
 
 

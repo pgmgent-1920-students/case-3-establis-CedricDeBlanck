@@ -27,6 +27,8 @@
 .slider-image1, .slider-image2, .slider-image3 {
   position: absolute;
   top: 0px;
+  z-index: -1;
+
 }
 
 .slider {
@@ -71,7 +73,6 @@
   top: 50vh;
   margin-left: 12%;
   margin-top: -100px;
-  z-index: 99999;
 }
 
 .header-text-top>h1 {

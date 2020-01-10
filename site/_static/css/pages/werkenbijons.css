@@ -9,7 +9,6 @@
 }
 
 .overtuigd {
-  margin-left: calc(var(--gutter)*6);
   color: var(--color-blue-cyan);
 }
 
@@ -28,6 +27,7 @@
 
 .overtuigd_bottom {
   display: flex;
+  margin-top: calc(var(--gutter)*5);
 }
 
 .overtuigd_contact h4 {
