@@ -429,6 +429,12 @@ a {
   margin-top: var(--gutter);
 }
 
+.error-page {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 1200px)  {
   .slider {
     height: 80vh;
