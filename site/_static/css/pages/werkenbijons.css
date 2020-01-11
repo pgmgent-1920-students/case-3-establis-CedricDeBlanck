@@ -128,6 +128,8 @@
   height: 438px;
 }
 
+
+
 @media only screen and (max-width: 1000px)  {
   .reason {
     display: block;
@@ -146,13 +148,29 @@
     display: block;
     margin-left: -80px;
   }
+
+  .jobs__total  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jobs_column_1 , .jobs_column_2 {
+  margin-left: calc(var(--gutter)*8);
+
+  }
 } 
 
 
 @media only screen and (max-width: 800px)  {
+  .jobs_column_1 , .jobs_column_2 {
+    margin-left: calc(var(--gutter)*5);
 
+    }
 } 
 
 @media only screen and (max-width: 600px)  {
-
+  .jobs_column_1 , .jobs_column_2 {
+    margin-left: calc(var(--gutter)*2);
+  
+    }
 } 

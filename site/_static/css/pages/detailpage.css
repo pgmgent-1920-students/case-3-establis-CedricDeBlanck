@@ -87,6 +87,7 @@
 .detail__maintext__news {
   margin-left: calc(var(--gutter)*5.4);
   margin-top: calc(var(--gutter)*1.7);
+  margin-bottom: calc(var(--gutter)*3);
 }
 
 .detail__maintext__news h2 {
@@ -219,3 +220,30 @@ overflow: hidden;
   transform: scale(1.1);
   transition-duration: 1s;
 }
+
+@media only screen and (max-width: 1000px)  {
+  .detail {
+    margin-left: -100px;
+  }
+  .detail img {
+    width: 700px;
+  }
+  .detail__maintext__news {
+    width: 700px;
+  }
+
+}
+
+@media only screen and (max-width: 850px)  {
+  .detail {
+    margin-left: -150px;
+  }
+  .detail img {
+    width: 500px;
+  }
+  .detail__maintext__news {
+    width: 500px;
+  }
+
+}
+

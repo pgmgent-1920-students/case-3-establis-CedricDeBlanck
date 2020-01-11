@@ -1,7 +1,7 @@
 .home_section_1_content {
   display: flex;
   justify-content: space-evenly;
-  margin-top: calc(var(--gutter)*10);
+  margin-top: calc(var(--gutter)*6);
 }
 
 .home_section_1_content > div > p {
@@ -435,6 +435,10 @@ a {
   margin: 0 auto;
 }
 
+.error-text {
+  width: max-content;
+  margin: calc(var(--gutter)*3) auto;
+}
 @media only screen and (max-width: 1200px)  {
   .slider {
     height: 80vh;
