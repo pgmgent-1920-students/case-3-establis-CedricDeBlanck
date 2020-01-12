@@ -5,6 +5,7 @@
   background-color: var(--color-grey-500);
   color: var(--color-blue-cyan);
   height: 50px;
+  cursor: pointer;
 }
 
 .mobile_top {

@@ -1,0 +1,174 @@
+.aboutus_header_image img {
+  position: absolute;
+  top: 0px;
+  width: 96.1%;
+  height: 578px;
+  z-index: -2;
+  height: 578px;
+}
+
+.aboutus_header_image {
+  height: 100px;
+}
+
+.aboutus_header_blue_bg {
+  width: 50%;
+  background-color: var(--color-blue-cyan);
+  z-index: -1;
+  height: 578px;
+  opacity: .7;
+  position: absolute;
+  top: 0px;
+}
+
+.aboutus_content {
+  color: var(--color-white);
+  position: absolute;
+  left: calc(var(--gutter)*6);
+  top: calc(var(--gutter)*8);
+}
+
+.aboutus_content h2 {
+  font-size: var(--font-size-h2);
+
+}
+
+.aboutus_image {
+  background-image: url(../../images/establis-about.jpg);
+  width: 865px;
+  height: 802px;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutus_text {
+  display: flex;
+}
+
+.aboutus_innertext {
+  width: 442px;
+  margin: auto;
+}
+
+.aboutus_innertext p {
+  color: var(--color-grey-text);
+}
+
+.aboutus_innertext h2 {
+  color: var(--color-blue-cyan);
+  font-size: calc(var(--font-size-h2) - 5px);
+}
+
+.aboutus_text_section2 {
+  width: 1100px;
+  margin: calc(var(--gutter)*5) auto;
+}
+
+.aboutus_text_section2 h2 {
+  font-size: calc(var(--font-size-h2) - 10px);
+  color: var(--color-blue-cyan);
+}
+
+.aboutus_text_section2 p {
+  color: var(--color-grey-text);
+}
+
+.aboutus_text_section2 span {
+  font-weight: bold;
+  color: var(--color-grey-dark);
+}
+
+.aboutus_text {
+  color: var(--color-grey-300);
+}
+
+.diensten picture img {
+  width: 50px;
+  height: 50px;
+}
+
+.diensten {
+  width: 340px;
+  text-align: center;
+  color: var(--color-blue-cyan);
+  margin-bottom: calc(var(--gutter)*2);
+}
+
+.aboutus_diensten {
+  position: relative;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1384px;
+  margin: calc(var(--gutter)*15) auto 0px auto;
+}
+
+.diensten_title {
+  font-family: proxima-nova,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+.diensten_text {
+  font-family: proxima-nova,Arial,sans-serif;
+  color: var(--color-grey-600);
+}
+
+
+
+@media only screen and (max-width: 1200px)  {
+  .aboutus_image {
+    height: 500px;
+  }
+  .aboutus_diensten {
+    margin: calc(var(--gutter)*15) auto 0px calc(var(--gutter)*8);
+  }
+
+  .aboutus_text_section2 {
+    width: 80%;
+  }
+
+  .aboutus_text {
+    display: block;
+  }
+  .aboutus_image{
+    width: 100%;
+  }
+  .aboutus_innertext {
+    margin-top: var(--gutter);
+    margin-left: calc(var(--gutter)*2.7);
+
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .aboutus_image {
+    height: 300px;
+  }
+
+  .aboutus_content {
+    left: var(--gutter);
+    top: calc(var(--gutter)*3)
+  }
+
+  .aboutus_diensten {
+    margin: calc(var(--gutter)*15) auto 0px calc(var(--gutter)*5);
+  }
+} 
+
+@media only screen and (max-width: 600px)  {
+  .aboutus_image {
+    height: 300px;
+  }
+
+  .aboutus_content h2 {
+    font-size: 25px;
+  }
+
+  .aboutus_content {
+    left: calc(var(--gutter) + 18px);
+  }
+} 
