@@ -1,0 +1,176 @@
+.werken_bij_ons {
+  color: var(--color-blue-cyan);
+  width: 520px;
+  margin-top: calc(var(--gutter)*2);
+}
+
+.werken_bij_ons p {
+  color: var(--color-grey-text);
+}
+
+.overtuigd {
+  color: var(--color-blue-cyan);
+}
+
+.overtuigd_contact {
+  margin-left: calc(var(--gutter)*2);
+
+}
+
+.overtuigd_contact>p>a {
+  color: var(--color-red-active);
+}
+
+.overtuigd_contact p {
+  color: var(--color-grey-text);
+}
+
+.overtuigd_bottom {
+  display: flex;
+  margin-top: calc(var(--gutter)*5);
+}
+
+.overtuigd_contact h4 {
+  color: var(--color-blue-cyan);
+  font-size: var(--font-size-h4);
+}
+
+.profielen>ul>li {
+  margin-top: var(--gutter);
+  text-transform: uppercase;
+}
+
+.profiel {
+  color: var(--color-blue-cyan);
+}
+
+.werken_bij_ons_image {
+  background-image: url(../../images/team_home.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  height: 517px;
+  margin: calc(var(--gutter)*2) auto calc(var(--gutter)*6) auto;
+}
+
+.profiles {
+  color: var(--color-blue-cyan);
+}
+
+.reason {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: calc(--gutter) auto;
+}
+
+.reasons {
+  margin-top: calc(var(--gutter)*2);
+}
+
+.reasons_text {
+  width: 450px;
+  margin: auto 0;
+}
+
+.reason img {
+  width: 480px;
+  height: 600px;
+  margin-bottom: calc(var(--gutter)*2);
+}
+
+.reason h2 {
+  font-size: 40px;
+  color: var(--color-blue-cyan);
+}
+
+.reason p {
+  color: var(--color-grey-text);
+}
+
+.reason a {
+  color: var(--color-red-active);
+}
+
+.reason:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+
+.reason:nth-of-type(4) {
+  flex-direction: row-reverse;
+}
+
+.reason:nth-of-type(6) {
+  flex-direction: row-reverse;
+}
+
+.reason:nth-of-type(1) img {
+  height: 542px;
+}
+
+.reason:nth-of-type(2) img {
+  height: 680px;
+}
+
+.reason:nth-of-type(3) img {
+  height: 805px;
+}
+
+.reason:nth-of-type(4) img {
+  height: 600px;
+}
+
+.reason:nth-of-type(5) img {
+  height: 456px;
+}
+
+.reason:nth-of-type(6) img {
+  height: 438px;
+}
+
+
+
+@media only screen and (max-width: 1000px)  {
+  .reason {
+    display: block;
+    width: 80%;
+  }
+
+  .container__1000 {
+    margin-left: calc(var(--gutter)*3);
+  }
+
+  .overtuigd {
+    margin-left: calc(var(--gutter)*2);
+  }
+
+  .overtuigd_bottom {
+    display: block;
+    margin-left: -80px;
+  }
+
+  .jobs__total  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jobs_column_1 , .jobs_column_2 {
+  margin-left: calc(var(--gutter)*8);
+
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .jobs_column_1 , .jobs_column_2 {
+    margin-left: calc(var(--gutter)*5);
+
+    }
+} 
+
+@media only screen and (max-width: 600px)  {
+  .jobs_column_1 , .jobs_column_2 {
+    margin-left: calc(var(--gutter)*2);
+  
+    }
+} 

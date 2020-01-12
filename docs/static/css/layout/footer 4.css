@@ -1,0 +1,132 @@
+.wrapper--footer {
+  background: var(--color-blue-cyan);
+  color: var(--color-white);
+  font-weight: 100;
+  padding-top: calc(var(--spacer)*3);
+}
+
+.footer>div>p>a {
+  color: var(--color-white);
+}
+
+.footer__nav__top {
+  color: var(--color-red-active);
+  font-size: 18px;
+
+}
+
+.contact_antwerpen {
+  margin-top: calc(var(--spacer)*4);
+}
+
+.footer__navigation li:hover {
+  color: var(--color-red-active);
+  transition: 0.350s;
+}
+
+.footer__navigation li {
+  color: var(--color-white);
+  margin-bottom: var(--spacer);
+  transition: 0.350;
+}
+
+.footer__navigation ul {
+  width: max-content;
+}
+
+.footer__social {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.footer__social i:last-child {
+  margin-left: 10px;
+}
+
+.footer__locations {
+  margin-top: calc(var(--spacer)*3);
+  padding-bottom: calc(var(--spacer)*1);
+}
+
+.copyright {
+  padding: calc(var(--spacer)*5);
+  border-top: 1px solid var(--color-grey-opacity);
+  margin-left: calc(var(--spacer));
+  margin-top: calc(var(--spacer)*5);
+  text-align: left;
+}
+
+.copyright_text p {
+  margin-left: -70px;
+}
+
+.signup {
+  margin: calc(var(--spacer)*5) 0px;
+  display: flex;
+}
+
+.signup h1 {
+  font-size: 50px;
+  margin-right: calc(var(--spacer)*3);
+
+}
+
+.signup form input {
+  background: transparent;
+  border: none;
+  color: var(--color-grey-opacity);
+  width: 600px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-grey-opacity);
+  padding: 20px;
+}
+
+.signup form button {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  margin-left: calc(var(--spacer)*2);
+  font-size: 15px;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.signup form button:hover {
+  color: var(--color-red-active);
+  transition-duration: .350s;
+}
+
+.signup form button i {
+  margin-left: 5px;
+  transition-duration: .350s;
+}
+
+.signup form button:hover i {
+  transform: translateX(5px);
+  transition-duration: 0.350s;
+}
+
+@media only screen and (max-width: 1200px)  {
+  .signup  {
+    display: block;
+  }
+
+  .signup form input {
+    width: 400px;
+    font-size: 15px;
+  }
+} 
+
+
+@media only screen and (max-width: 800px)  {
+  .footer__locations > .g-fb-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup form input {
+    width: 280px;
+    font-size: 10px;
+  }
+} 

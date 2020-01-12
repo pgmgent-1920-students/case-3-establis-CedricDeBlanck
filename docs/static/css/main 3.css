@@ -1,0 +1,24 @@
+@import "abstracts/fonts.css";
+@import "abstracts/variables.css";
+@import "abstracts/utilities.css";
+@import "base/common.css";
+@import "base/typography.css";
+@import "layout/footer.css";
+@import "layout/grid.css";
+@import "layout/header.css";
+@import "components/navigation.css";
+@import "components/slider.css";
+@import "components/movile_nav.css";
+@import "base/keyframes.css";
+@import "pages/home.css";
+@import "pages/overons.css";
+@import "pages/projecten.css";
+@import "pages/team.css";
+@import "pages/duurzaamheid.css";
+@import "pages/werkenbijons.css";
+@import "pages/nieuws.css";
+@import "pages/contact.css";
+@import "pages/detailpage.css";
+@import "pages/jobs.css";
+
+
